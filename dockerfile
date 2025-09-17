@@ -36,4 +36,6 @@ USER grafana
 CMD ["bin/grafana-server", \
      "--homepath=/opt/grafana", \
      "--config=/opt/grafana/conf/defaults.ini", \
-     "--packaging=docker"]
+     "--packaging=docker", \
+     "--http-port=3000"]
+
