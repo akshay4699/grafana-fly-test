@@ -10,9 +10,12 @@ app = "grafana-demo"
 [[services]]
   internal_port = 3000
   protocol = "tcp"
+
   [[services.ports]]
     handlers = ["http"]
     port = 80
+
   [[services.ports]]
-    handlers = ["tls","http"]
+    handlers = ["tls", "http"]
     port = 443
+
