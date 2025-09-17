@@ -1,0 +1,4 @@
+- name: Deploy to Fly (remote build)
+  env:
+    FLY_API_TOKEN: ${{ secrets."FlyV1 fm2_lJPECAAAAAAAChQpxBDXiV9jN/n0vchFV0iUmgiewrVodHRwczovL2FwaS5mbHkuaW8vdjGWAJLOABN7pR8Lk7lodHRwczovL2FwaS5mbHkuaW8vYWFhL3YxxDxDYGkDHGe17gpKUR3Lyj88sobCcZ6tQ3yHI5so3/u9+RgVl4jjq2FNMHISBm1y8PL2xyVxFjnQ1svrNP/ETqH3Ft+zjHF9qhE6Ziz+6NRi3hkR+dddepCMMO4GtJZTJ0Z9JR6czoUjBcC+Lr7z2/WI9IycPE11YDtrUON4tZzW3XDNVhDHNFxic0GAYg2SlAORgc4Am5nwHwWRgqdidWlsZGVyH6J3Zx8BxCDUVXgaM5iWJi5YqXICPKVTesE0YCALaxOyMkvrMvRDJg==,fm2_lJPETqH3Ft+zjHF9qhE6Ziz+6NRi3hkR+dddepCMMO4GtJZTJ0Z9JR6czoUjBcC+Lr7z2/WI9IycPE11YDtrUON4tZzW3XDNVhDHNFxic0GAYsQQK2XaewaCyaxQxME7D++ETMO5aHR0cHM6Ly9hcGkuZmx5LmlvL2FhYS92MZgEks5oyuwOzmqsH6wXzgASuN8Kkc4AErjfDMQQZMTXmtrWTEfdoNujiw5rSsQgoJuKq/60bRJBBUSqW1/0aCgE14POiDHPYetIi8LbP4k=" }}
+  run: fly deploy --config fly.toml --app grafana-demo --remote-only
