@@ -1,0 +1,18 @@
+app = "grafana-demo"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[mounts]
+  source = "grafana_data"
+  destination = "/var/lib/grafana"
+
+[[services]]
+  internal_port = 3000
+  protocol = "tcp"
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
+  [[services.ports]]
+    handlers = ["tls","http"]
+    port = 443
